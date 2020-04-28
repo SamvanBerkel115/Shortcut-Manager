@@ -30,13 +30,37 @@ body #divSidebar .divSidebarHeader .h1SidebarHeader {
   width: fit-content;
   border-bottom: solid 3px #c72c76;
   padding-bottom: 6px;
+  display: inline-block;
 }
 
-body #divSidebar #ulPrograms {
+body #divSidebar .divSidebarHeader .btnAddProgram {
+  width: 30px;
+  height: 30px;
+  float: right;
+  line-height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+body #divSidebar .divSidebarHeader .btnAddProgram p {
+  font-weight: 700;
+  color: #1f1f1f;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+body #divSidebar .divSidebarHeader .btnAddProgram:hover {
+  background-color: #f1f1f1;
+}
+
+body #divSidebar ul {
   margin-bottom: 20px;
 }
 
-body #divSidebar #ulPrograms li {
+body #divSidebar ul li {
   padding: 10px;
   border-radius: 10px;
   margin-top: 10px;
@@ -44,7 +68,7 @@ body #divSidebar #ulPrograms li {
   transition: all 0.3s;
 }
 
-body #divSidebar #ulPrograms li:hover {
+body #divSidebar ul li:hover {
   background-color: #f1f1f1;
   cursor: pointer;
 }

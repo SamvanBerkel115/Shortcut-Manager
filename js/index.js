@@ -2,6 +2,7 @@ index = {
     set: {
         shortcutCategories: function(categories) {
             let ulCategories = Id('ulCategories');
+            ulCategories.innerHTML = '';
             
             categories.forEach(category => {
                 let categoryHeader = document.createElement('div');
@@ -21,7 +22,38 @@ index = {
 
             programs.forEach(program => {
                 let programLi = document.createElement('li');
-                programLi.innerHTML = `<p>${program.program}`;
+                programLi.innerHTML = `
+                    <p>${program.program}</p>
+                    <input type="text" style="display:none;">
+                `;
+
+                programLi.params = program;
+                programLi.onclick = function(evt) {
+                    index.set.shortcutCategories(this.params.categories);
+                };
+
+                programLi.ondblclick = function(evt) {
+                    let inputBox = this.querySelector('input');
+                    let programName = this.querySelector('p');
+
+                    inputBox.style.display = "block";
+                    programName.style.display = "none";
+
+                    let programNameText = this.querySelector('p').innerHTML;
+                    inputBox.value = programNameText;
+                    inputBox.focus();
+                }
+
+                programLi.querySelector('input').onblur = programLi.querySelector('input').onchange = function(evt) {
+                    debugger;
+                    let inputBox = this;
+                    let programName = inputBox.parentElement.querySelector('p');
+
+                    programName.innerHTML = inputBox.value;
+
+                    inputBox.style.display = "none";
+                    programName.style.display = "block";
+                }
 
                 programList.appendChild(programLi);
             });
@@ -86,10 +118,10 @@ index = {
                     }
                 ]
             }, {
-                "program": "Visual Studio Code",
+                "program": "Visual Studio Code 2",
                 "categories": [
                     {
-                        "category": "Basic editing",
+                        "category": "Basic Editing",
                         "shortcuts": [
                             {"name": "Open terminal", "buttons": "CTRL, SHIFT, `"},
                             {"name": "Collapse all", "buttons": "SHIFT, C"}
@@ -100,7 +132,7 @@ index = {
         ],
         games: [
             {
-                "program": "Visual Studio Code",
+                "program": "Red alert 2",
                 "categories": [
                     {
                         "category": "Basic editing",
