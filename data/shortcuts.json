@@ -1,0 +1,7 @@
+[{
+    "program": "Visual Studio Code",
+    "shortcuts": [
+        {"name": "test", "buttons": "CTRL, V"},
+        {"name": "test2", "buttons": "SHIFT, C"}
+    ]
+}]
