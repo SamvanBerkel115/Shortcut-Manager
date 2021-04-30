@@ -90,6 +90,7 @@ body {
                 background-color: #f1f2f6;
                 margin-bottom: 10px;
                 border-bottom: solid 1px #ced6e0;
+                width: 100%;
 
                 h2 {
                     width: fit-content;
@@ -102,6 +103,8 @@ body {
             .ulShortcuts {
                 background-color: white;
                 margin-bottom: 20px;
+                border: solid 1px #e1e5ea;
+
                 li {
                     padding: 10px 20px 10px 20px;
                     height: 60px;

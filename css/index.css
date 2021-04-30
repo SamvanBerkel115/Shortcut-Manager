@@ -96,6 +96,7 @@ body #divShortcuts #ulCategories .divCategoryHeader {
   background-color: #f1f2f6;
   margin-bottom: 10px;
   border-bottom: solid 1px #ced6e0;
+  width: 100%;
 }
 
 body #divShortcuts #ulCategories .divCategoryHeader h2 {
@@ -110,6 +111,7 @@ body #divShortcuts #ulCategories .divCategoryHeader h2 {
 body #divShortcuts #ulCategories .ulShortcuts {
   background-color: white;
   margin-bottom: 20px;
+  border: solid 1px #e1e5ea;
 }
 
 body #divShortcuts #ulCategories .ulShortcuts li {
